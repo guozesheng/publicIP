@@ -39,11 +39,11 @@ namespace publicIP
         {
             WebClient client = new WebClient();
             int times = 5;
-            int timeout = 2000;
+            int timeout = 4000;
 
             while (times-- > 0)
             {
-                string str = client.DownloadString("http://1.guozesheng.sinaapp.com/publicIP");
+                string str = client.DownloadString("http://1.guozesheng.sinaapp.com/publicIP/set.php");
 
                 if (str == "hello, world")
                 {
